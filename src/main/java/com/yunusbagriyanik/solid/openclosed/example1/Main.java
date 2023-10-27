@@ -16,22 +16,25 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         ShapeNonCompliant shapeNonCompliant = new ShapeNonCompliant();
-        double v1 = shapeNonCompliant.calculateArea(List.of(new RectangleV1(5, 10), new CircleV1(5)));
-        double v2 = shapeNonCompliant.calculateArea(List.of(new RectangleV1(5, 10), new RectangleV1(5, 5)));
-        log.info("V1: {}", v1);
-        log.info("V2: {}", v2);
+        double totalArea1 = shapeNonCompliant.calculateArea(List.of(new RectangleV1(5, 10), new CircleV1(5)));
+        double totalArea2 = shapeNonCompliant.calculateArea(List.of(new RectangleV1(5, 10), new RectangleV1(5, 5)));
+        log.info("Total Area 1: {}", totalArea1);
+        log.info("Total Area 2: {}", totalArea2);
 
-        double v3 = shapeNonCompliant.calculateArea(List.of(new TriangleV1(5, 10)));
-        log.info("V3: {}", v3);
+        double totalArea3 = shapeNonCompliant.calculateArea(List.of(new TriangleV1(5, 10)));
+        log.info("Total Area 3: {}", totalArea3);
 
         ShapeOcpCompliant shapeCompliant = new ShapeOcpCompliant();
-        double v4 = shapeCompliant.calculateArea(List.of(new Rectangle(5, 10), new Circle(5)));
-        log.info("V4: {}", v4);
+        double totalArea4 = shapeCompliant.calculateArea(List.of(new Rectangle(5, 10), new Circle(5)));
+        log.info("Total Area 4: {}", totalArea4);
 
-        double v5 = shapeCompliant.calculateArea(List.of(new Rectangle(5, 10)));
-        log.info("V5: {}", v5);
+        double totalArea5 = shapeCompliant.calculateArea(List.of(new Rectangle(5, 10)));
+        log.info("Total Area 5: {}", totalArea5);
 
-        double v6 = shapeCompliant.calculateArea(List.of(new Triangle(5, 10)));
-        log.info("V6: {}", v6);
+        double totalArea6 = shapeCompliant.calculateArea(List.of(new Triangle(5, 10)));
+        log.info("Total Area 6: {}", totalArea6);
+
+        double totalArea7 = shapeCompliant.calculateArea(List.of(new Triangle(5, 10), new Rectangle(5, 10)));
+        log.info("Total Area 7: {}", totalArea7);
     }
 }
