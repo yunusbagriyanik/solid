@@ -3,6 +3,7 @@ package com.yunusbagriyanik.solid.openclosed.example1;
 import com.yunusbagriyanik.solid.openclosed.example1.compliant.ShapeOcpCompliant;
 import com.yunusbagriyanik.solid.openclosed.example1.compliant.model.Circle;
 import com.yunusbagriyanik.solid.openclosed.example1.compliant.model.Rectangle;
+import com.yunusbagriyanik.solid.openclosed.example1.compliant.model.Triangle;
 import com.yunusbagriyanik.solid.openclosed.example1.noncompliant.ShapeNonCompliant;
 import com.yunusbagriyanik.solid.openclosed.example1.noncompliant.model.CircleV1;
 import com.yunusbagriyanik.solid.openclosed.example1.noncompliant.model.RectangleV1;
@@ -29,5 +30,8 @@ public class Main {
 
         double v5 = shapeCompliant.calculateArea(List.of(new Rectangle(5, 10)));
         log.info("V5: {}", v5);
+
+        double v6 = shapeCompliant.calculateArea(List.of(new Triangle(5, 10)));
+        log.info("V6: {}", v6);
     }
 }
